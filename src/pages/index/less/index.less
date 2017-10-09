@@ -1,0 +1,137 @@
+@import '../less/commonstyle.less';
+body{
+    background: #F4F3F2;
+
+    .pswp__top-bar{
+        height: 0.88rem;
+    }
+    .pswp__counter{
+        height: 0.88rem;
+        font-size: 0.28rem;
+        line-height: 0.88rem;
+        padding: 0 0.2rem;
+    }
+    .pswp__button, .pswp__button--arrow--left:before, .pswp__button--arrow--right:before{
+        width: 0.88rem;
+        height: 0.88rem;
+        background-size: 5.28rem 1.76rem;
+    }
+    .pswp__button--close{
+        background-position: 0 -0.88rem;
+    }
+    .pswp__button--share,.pswp--supports-fs .pswp__button--fs,.pswp__button--zoom{
+        display: none;
+    }
+    
+}
+.reportContent{
+    .formData-box{
+        background: #ffffff;
+        border-top: 1px solid #dddddd;
+        border-bottom: 1px solid #dddddd;
+        .title{
+            height: 0.96rem;
+        }
+        .content-box{
+            padding: 0.2rem 0;
+            overflow: hidden;
+            border-bottom: 1px solid #dddddd;
+        }
+        .content{
+            min-height: 2.14rem;
+            border: 0;
+        }
+        .title,.content{
+            width: 100%;
+            font-size: 0.32rem;
+            padding-left: 0.24rem;
+            padding-right: 0.24rem;
+        }
+        textarea::-webkit-input-placeholder{
+            color: #bcbcbc;
+        }
+        .pics-box{
+            position: relative;
+            padding: 0.38rem 0.2rem 0.24rem 0.2rem;
+            overflow: hidden;
+            .add-pic{
+                position: relative;
+                width: 1.2rem;
+                height: 1.2rem;
+                border: 1px solid #dddddd;
+                margin: 0.05rem .2rem .2rem 0;
+                &.add-abs{
+                    position: absolute;
+                    top: 1.78rem;
+                }
+
+                .icon1{
+                    position: absolute;
+                    height: 0.5rem;
+                    top: 0.34rem;
+                    left: 50%;
+                    border-left: 1px solid #dddddd;
+                }
+                .icon2{
+                    position: absolute;
+                    width: 0.5rem;
+                    top: 50%;
+                    left: 0.34rem;
+                    border-bottom: 1px solid #dddddd;
+                }
+            }
+            #take-picture{
+                position: absolute;
+                z-index: -1;
+                visibility: hidden;
+                left: 0;
+            }
+            .pics{
+                font-size: 0;
+                .img{
+                    position: relative;
+                    margin: 0 0.2rem 0.2rem 0;
+                    display: inline-block;
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    
+                    img{
+                        max-height:1.2rem;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                    a{
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                    }
+                }
+                .img-del{
+                    position: absolute;
+                    top: -0.21rem;
+                    right: -0.21rem;
+                    width: 0.42rem;
+                    height: 0.42rem;
+                    background: url('../img/E416A7F1-6699-4712-88BF-E8DFA7079AB5.png') no-repeat;
+                    background-size: 100% 100%;
+                }
+            }
+        }
+    }
+    .tip-txt{
+        padding: 0.2rem;
+        font-size: 0.24rem;
+        color: #666666;
+    }
+
+    .btn.save{
+        background: #ff893f;
+        &.active{
+            background: #E86412;
+        }
+    }
+}

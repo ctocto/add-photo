@@ -1,0 +1,17 @@
+{
+  "name": "add-photo",
+  "version": "1.0.0",
+  "description": "Best project ever.",
+  "main": "index.js",
+  "scripts": {
+    "start": "ehdev server",
+    "build": "ehdev build"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "fastclick": "^1.0.6",
+    "lodash": "^4.17.4",
+    "zepto": "^1.2.0"
+  }
+}

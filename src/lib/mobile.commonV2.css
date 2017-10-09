@@ -1,0 +1,228 @@
+@charset "utf-8";
+/* common */
+/* */
+html, body{
+    margin:0px;
+    padding: 0px;
+}
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    line-height: 1.5;
+    /*font-family:"PingFangSC-Regular,Helvetica Neue,Hiragino Sans GB W3,Hiragino Sans GB,"Droid Sans",,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif";*/
+    font-family: PingFangSC-Regular,Helvetica,"Droid Sans",Arial,sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    -ms-touch-action: none;/*ie不允许默认的touch行为*/
+}
+*{
+    -webkit-touch-callout: none;/*禁用系统默认菜单*/
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+body input,body textarea {
+    -webkit-user-select: auto;
+    -webkit-touch-callout: inherit;
+}
+body input::-ms-input-placeholder{text-align: center;}
+body input::-webkit-input-placeholder{text-align: center;}
+dl, dt, dd, ul, ol, li, h1{
+    list-style:none;
+    padding:0px;
+    margin:0px;
+}
+img{
+    border:0;
+    vertical-align:middle;
+    max-width:100%;
+    height: auto;
+    display:block;
+}
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+a{
+    text-decoration:none;
+    color:#333;
+    cursor:pointer;
+    outline:none;
+}
+a:hover{
+    text-decoration:none;
+}
+a:active{
+    outline:none;
+}
+*:focus{
+    outline:none;
+}
+.zoom{
+    overflow:hidden;
+}
+em{font-style:normal;}
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+/* IE 6/7 */
+.clearfix { zoom: 1; }
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+
+.txt-hide{
+    width:100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.page_type_h5{
+    margin:0 auto;
+    max-width: 7.5rem;
+    width:100%;
+    overflow-y: auto;
+}
+#J_mask{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    /*visibility: hidden;*/
+    display:none;
+    transition: all 0.2s;
+    opacity: 0;
+    z-index: 950;
+    -webkit-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+}
+.J_visibilityMask #J_mask{
+    opacity: 0.5;
+    /*visibility:visible;*/
+    display:block;
+}
+.J_activityCPM{
+    position: fixed;
+    top:0;
+    z-index: 951;
+    -webkit-transform: translate3d(0,-200%,0);
+       -moz-transform: translate3d(0,-200%,0);
+        -ms-transform: translate3d(0,-200%,0);
+         -o-transform: translate3d(0,-200%,0);
+            transform: translate3d(0,-200%,0);
+    /*visibility: hidden;*/
+    /*display:none;*/
+    opacity:0;
+    -webkit-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+}
+.J_visibilityCPM .J_activityCPM{
+    /*visibility: visible;*/
+    /*display:block;*/
+    opacity:1;
+    -webkit-transform: translate3d(0,40%,0);
+       -moz-transform: translate3d(0,40%,0);
+        -ms-transform: translate3d(0,40%,0);
+         -o-transform: translate3d(0,40%,0);
+            transform: translate3d(0,40%,0);
+}
+.d-flex-f{
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+.d-flex-vc{
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.d-flex-hc{
+    -webkit-box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.fixed-vh-center{
+    position: fixed;
+    top: 50%;
+    left:50%;
+    -webkit-transform:translate3d(-50%, -50%, 0);
+    transform:translate3d(-50%, -50%, 0);
+}
+/*填充图片样式*/
+.fill_img {
+  display: block;
+  width: 100%;
+}
+/*fadeIn*/
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fadeIn {
+    -webkit-animation: fadeIn .4s ease both 0s;
+    animation: fadeIn .4s ease both 0s;
+}
+/*fadeOut*/
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.fadeOut {
+    -webkit-animation: fadeOut .4s ease both 0s;
+    animation: fadeOut .4s ease both 0s;
+}
+/*tips*/
+.ui_alert{
+    position: fixed!important;
+    border-radius: 0.08rem!important;
+}
+.ui_alert p{
+    font-size: 0.32rem!important;
+    padding: 0.2rem 0.3rem!important;
+}

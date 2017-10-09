@@ -1,0 +1,19 @@
+{
+  "type": "standard",
+  "libiary": {
+    "commonLib": [ "./lib/common.js" ]
+  },
+  "externals": {
+    "zepto": {
+      "path": "node_modules/zepto/dist/zepto.min.js",
+      "alias": "$"
+    }
+  },
+  "proxy": {
+    "/someApiPath": "http://some.host"
+  },
+  "browser_support": {
+    "DEVELOPMENT": [ "last 2 versions" ],
+    "PRODUCTION": [ "last 2 versions" ]
+  }
+}
